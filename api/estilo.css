@@ -1,0 +1,36 @@
+body {
+    background-color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.painel{
+    background-color: white;
+    width: 400px; /*largura*/
+    height: 450px; /*altura*/
+    padding-top: 20px;
+    padding-left: 150px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.botao {
+    background-color: green;
+    border: none;
+    color: white;
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+}
+.botao:hover{
+    background-color: red;
+    height: 40px;
+    width: 40px;
+}
+
+#cep{
+    height: 32px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    text-align: center;
+}
