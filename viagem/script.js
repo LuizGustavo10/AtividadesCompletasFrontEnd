@@ -9,7 +9,7 @@ $(window).scroll( function(){
 
 //quando estiver digitando, já vai fazendo a busca
 document.getElementById("busca").addEventListener("keyup", function(){ 
-
+    
     var entrada = this.value.toLowerCase();                   //valor de entrada
     var cartoes = document.getElementsByClassName("card");    //lista de cards
 
@@ -23,5 +23,4 @@ document.getElementById("busca").addEventListener("keyup", function(){
        }
 
     }
-
 });

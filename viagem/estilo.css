@@ -8,8 +8,27 @@
     background-size: cover;            /*img de fundo ajustada*/
     position: relative;                /*posição nunca muda*/                
     background-attachment: fixed;      /*deixa imagem de fundo fixa*/
-    background-image: url( https://1.bp.blogspot.com/-P4-bMtMEFKY/T_iFFmbsYcI/AAAAAAAAAbw/GC4u6qO9psI/s1600/HOTEL%2BSESC%2BCAIOBA001.jpg );                 
+    background-image: url(https://th.bing.com/th/id/R.11ca79c9e01e1d9e49bd0670247a45d7?rik=Uu%2fTtCqAaQGLWQ&riu=http%3a%2f%2f4.bp.blogspot.com%2f_0EQljdG_qPg%2fRpt7JrcYRxI%2fAAAAAAAAAAM%2fjizSs3Shp-A%2fw1200-h630-p-k-no-nu%2fDSC05487.JPG&ehk=fyjNTGL2Q6Vf61IYYQDNxS9vc1Y%2fu4cSxDaxNxNxFrc%3d&risl=&pid=ImgRaw&r=0 );                 
 }
+
+.textoViagem{
+    font-family: travel;
+    color: rgb(255, 255, 255);
+    padding-top: 30px;
+    text-align: center;
+    font-size: 50px;
+    animation: aparecer 9s;
+}
+@keyframes aparecer {
+    0%{ 
+        font-size: 2px;
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
 
 .aviao{
 
