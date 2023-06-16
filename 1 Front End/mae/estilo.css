@@ -1,0 +1,33 @@
+body {
+    background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-floral-wallpaper_52683-67104.jpg);
+    background-size: cover;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.painel{
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.74);
+    border-radius: 10px;
+    padding-left: 40px;
+    margin: auto;
+    margin-top: 70px;
+    border: 2px solid gray;
+}
+
+.botao{
+    background-color: deeppink;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 60px;
+    border-radius: 10px;
+}
+.botao:hover{
+    background-color: red;
+    height: 50px;
+    width: 70px;
+    transition: 1s;
+}
+

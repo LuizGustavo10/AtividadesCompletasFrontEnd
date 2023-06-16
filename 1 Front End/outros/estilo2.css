@@ -1,0 +1,79 @@
+body {
+    background-image: url("https://i2.wp.com/www.multarte.com.br/wp-content/uploads/2018/12/fundo-branco6.jpg?fit=2022%2C1173&ssl=1");
+    margin-left: 500px;
+    margin-right: 500px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+}
+
+.foto {
+    /* altura e largura */
+    width: 500px;
+    height: 300px; 
+
+    border: 10px solid red;
+    border-radius: 20px;
+
+}
+
+.foto:hover {
+    transition: 2s;
+    width: 600px;
+    height: 400px;
+}
+
+
+.pagina {
+    color: red;
+    text-decoration: none;
+}
+
+.pagina:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.negrito {
+    background-color: rgb(242, 208, 208);
+}
+
+.pagina2{
+    text-decoration: none;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.botao{
+    background-color: red;
+    color:white;
+    border-radius: 10px;
+}
+
+.tabela {
+    margin-top: 50px;
+    width: 500px;
+    background-color:darkslateblue;
+    color: azure;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+
+}
+
+.titulo {
+    color:  rgb(211, 174, 174);
+    background-color: blueviolet;
+    font-size: 30px;
+}
+
+.tabela tr:hover {
+    color: red;
+    font-size: 30px;
+    transition: 2s;
+}
+
+.cabecalho{
+    color: red;
+    font
+}
+

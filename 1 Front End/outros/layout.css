@@ -1,0 +1,110 @@
+body, p {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-style:normal;
+    color: black;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+} 
+header {
+    grid-area: cabecalho;
+    background-color: rgb(26, 37, 37);
+    border-radius: 20px;
+}
+section {
+    grid-area: secao;
+    background-color: rgb(253, 253, 253);
+}
+
+aside {
+    grid-area: barra-lateral;
+    background-color: rgb(240, 254, 255);
+    border: 1px solid rgb(237, 225, 225);
+    border-radius: 20px;
+}
+footer {
+    grid-area: rodape;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.parte1, .parte2, .parte3{
+    width: 25%;
+    background-color: rgb(246, 246, 246);
+    border: 1px solid rgb(237, 225, 225);
+    border-radius: 20px;
+}
+
+.parte2{
+    width: 50%;
+    margin: 0 2px;
+}
+
+.principal {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 120px 450px 150px;
+    grid-template-areas:
+    " cabecalho cabecalho"
+    " secao barra-lateral "
+    " rodape rodape ";
+
+}
+
+.logo {
+    width: 70px;
+    border-radius: 10px;
+}
+
+.titulo {
+    color: white;
+}
+
+.imagem {
+    margin: 15px;
+    width: 250px;
+    border: 5px solid rgb(210, 204, 204);
+    border-radius: 10px;
+}
+
+.imagemRodape{
+    width: 100px;
+}
+
+@media(max-width: 992px) {
+    .principal {
+        grid-template-columns: 100%;
+        grid-template-areas: "cabecalho" "secao" "barra-lateral" "rodape";
+    }
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .parte1, .parte2, .parte3{
+        margin: 0;
+        width: 49%;
+    }
+    
+    .parte2{
+        width: 100%;
+        order: -1;
+    }
+}
+
+@media(max-width: 768px){
+    body {
+        margin: 0 15px;
+    }
+
+    .principal, .parte1, .parte2, .parte3 {
+        width: 100%;
+    }
+
+    .parte2 {
+        order: initial; 
+    }
+}

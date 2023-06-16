@@ -1,0 +1,62 @@
+/* esta é a parte da foto */
+
+
+.foto {
+    border: 10px solid blue;
+    border-radius: 100%;
+    width: 250px;
+}
+
+
+body {
+    /* background-color:red; */
+    background-image: linear-gradient(to left, rgba(65, 12, 12, 0.127), rgba(0, 0, 255, 0.222));
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.menu {
+    background-color: black;
+    border-radius: 15px;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a {
+    color: white;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    background-color: blue;
+    font-size: 20px;
+    border-radius: 20px;
+    transition-duration: 2s;
+}
+
+.tabela {
+    text-align: left;
+    background-color: rgb(59, 59, 141);
+    color: rgb(255, 255, 255);
+    font-family: fantasy;
+}
+
+.tabela tr td:hover{
+    font-size: 20px;
+    color: yellow;
+}
+
+
+
+
+
+
+
+

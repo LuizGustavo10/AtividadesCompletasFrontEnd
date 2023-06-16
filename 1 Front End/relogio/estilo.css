@@ -1,0 +1,59 @@
+.painel{
+    border: 1px solid black;
+    height: 300px;              /*altura*/
+    width: 600px;               /*largura*/
+    border-radius: 10px;        /*arredondar*/
+    box-shadow: 1px 1px 10px black;
+    margin: 60px auto;        /*100px altura + centraliza*/
+    font-size: 60px;
+    text-align: center;
+    font-family: fantasy;
+    background-image: linear-gradient(rgb(248, 248, 255), rgb(76, 76, 254));
+
+}
+
+body{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#relogio{
+    width: 200px;
+    height: 200px;
+    border: 1px dotted black;
+    border-radius: 50%;
+    position: relative;
+    margin: 50px auto;
+    box-shadow: 2px 2px 2px black;
+}
+#ponteiroHora{
+    background-color: black;
+    position: absolute;
+    transform-origin: bottom center;
+    width: 6px;
+    height: 60px;
+    top: 40px;
+    left: 97px;
+    box-shadow: 2px 2px 2px black;
+}
+
+#ponteiroMin{
+    background-color:yellow;
+    position: absolute;
+    transform-origin: bottom center;
+    width: 4px;
+    height: 90px;
+    top: 10px;
+    left: 98px;
+    box-shadow: 2px 2px 2px black;
+}
+#ponteiroSeg{
+    background-color:red;
+    position: absolute;
+    transform-origin: bottom center;
+    width: 2px;
+    height: 100px;
+    top: 2px;
+    left: 98px;
+    box-shadow: 2px 2px 2px black;
+}

@@ -1,0 +1,90 @@
+.container{
+    width: 1000px;
+    margin-left: auto; /*centralizando*/
+    margin-right: auto; /*centralizando*/
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.405);
+    
+}
+
+.container{
+    display: flex;
+}
+
+.quadrado {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 150px;
+    border: 5px solid white;
+    border-radius: 30px;
+
+}
+.jogo {
+    margin: 15px auto; /*centralizando*/
+    background: rgb(0, 0, 0);
+    color: white; 
+    border: 5px solid black;
+    border-radius: 30px;
+}
+body {
+   text-align: center;
+    background-image: url('https://scontent.fbfh3-3.fna.fbcdn.net/v/t39.30808-6/325899398_626182482843972_8101178882992531734_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=1M9V2w7VZbMAX-zwfUA&_nc_ht=scontent.fbfh3-3.fna&oh=00_AfB2sJUVuNG-4nvgKd7HwvrhbleLSfrXc6864xgA1XdqHA&oe=643E38A3');
+    font-family: fantasy;
+    color: white;
+}
+
+.botao {
+    font-size: 20px;
+    background-color: rgb(96, 67, 240);
+    color: white;
+    margin: 10px;
+    border-radius: 7px;
+    border: 3px solid white
+
+
+}
+
+
+label{
+    color: white;
+}
+
+.botao:hover{
+    background-color: red;
+    font-size: 25px;
+}
+
+.texto {
+    color: rgb(255, 255, 255);
+    font-size:30px;
+}
+
+#q1 {
+    background-color: red;
+}
+#q2{
+    background-color: darkorange;
+}
+#q3{
+    background-color: gold;
+}
+#q4{
+    background-color: green;
+}
+#q5{
+    background-color:blueviolet;
+}
+#q6{
+    background-color: deeppink;
+}
+#q7{
+    background-color: darkblue;
+}
+#q8{
+    background-color: dimgray;
+}
+#q9{
+    background-color: aqua;
+}

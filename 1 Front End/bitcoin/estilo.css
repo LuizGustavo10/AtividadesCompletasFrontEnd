@@ -1,0 +1,42 @@
+body{
+    background-color: coral;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.painel {
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 20px black;
+}
+
+#moeda{
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+}
+.botao{
+    background-color: coral;
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+}
+
+img{
+    animation: rotacionar 5s infinite alternate;
+}
+
+@keyframes rotacionar {
+    0%{
+        transform: rotate3d(0,1,0, 0deg);
+    }
+    100%{
+        transform: rotate3d(0,1,0, 360deg)
+    }
+}
+
