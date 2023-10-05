@@ -27,8 +27,7 @@ function reiniciar(){
 }
 
 // fulano = 0, ciclano =1, deltrano =2, beltrano=3
-
-const nomes = ['fulano','ciclano','deltrano','beltrano','antonio','carlos'];
+const nomes = ['ALISSON', 'DIOGO ', 'ERICK' ,'FELIPE ', 'GERSON ', 'HILLARY' , 'JOSÉ' ,'MARIA' , 'REINALDO '];
 
 function gerarBatalha(){
  //sorteia um nome da lista, "Math.random vai sortear os itens", "math.floor arredonda o numero da lista"
@@ -64,7 +63,5 @@ function listar(){
         var nomeItem = nomes[i];                    //guarda na variável NomeItem o nome especifico da lista 
         item.innerHTML = nomeItem;                  //colocar valor dentro do <li>
         listagem.appendChild(item);                 //adiciona o <li> na lista do html, dentro do <ul>
-
-
     }
 }

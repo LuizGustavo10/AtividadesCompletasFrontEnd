@@ -30,9 +30,10 @@
 }
 body {
    text-align: center;
-    background-image: url('https://scontent.fbfh3-3.fna.fbcdn.net/v/t39.30808-6/325899398_626182482843972_8101178882992531734_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=1M9V2w7VZbMAX-zwfUA&_nc_ht=scontent.fbfh3-3.fna&oh=00_AfB2sJUVuNG-4nvgKd7HwvrhbleLSfrXc6864xgA1XdqHA&oe=643E38A3');
+    background-image: url('https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-2460.jpg?size=626&ext=jpg');
     font-family: fantasy;
     color: white;
+    background-size: cover;
 }
 
 .botao {
