@@ -3,10 +3,9 @@ var num2;
 var total;
 
 function converterParaNumero(){
-    num1 = parseInt(num1);
-    num2 = parseInt(num2);
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
 }
-
 
 function entrada(){
     //pega os campos de input da tela
@@ -39,10 +38,8 @@ function dividir(){
 }
 
 function limpar(){
-
     var total = document.getElementById("resultado");
     total.innerHTML = " ";
     document.getElementById("n1").value="";
     document.getElementById("n2").value="";
-
 }

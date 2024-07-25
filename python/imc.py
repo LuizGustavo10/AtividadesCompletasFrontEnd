@@ -22,3 +22,9 @@ elif imc < 40:
     print('Obsesidade II')
 else:
     print('Obesidade III')
+
+#criar oficina de 30 minutos
+#workshop
+#algo prático
+#jogo ou algo pronto
+#cartaz no canva com i.a chatgpt luzia

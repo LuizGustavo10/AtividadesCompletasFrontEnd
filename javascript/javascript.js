@@ -10,7 +10,7 @@ if(numero > 10){
     // alert('menor que 10');
 }
 
-var contador = 0;
+var contador = 0; 
 
 //enquanto contador for menor que 5 executa 
 while(contador < 5){
@@ -20,6 +20,7 @@ while(contador < 5){
 
 //criação de lista - Fulano 0, Ciclano 1, Deltrano 2
 var nomes = ['Fulano','Ciclano','Deltrano'];
+
 // alert(nomes[0]);
 
 //nomes.lenght = 3
@@ -29,7 +30,6 @@ for(contador=0; contador < nomes.length; contador++){
     if(nomes[contador] === 'Ciclano'){
         // alert('Pessoa Encontrada!')
     }
-
 }
 
 //função

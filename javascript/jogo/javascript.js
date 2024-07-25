@@ -35,12 +35,12 @@ function gerarBatalha(){
     const nome2 = nomes[ Math.floor( Math.random() * nomes.length ) ];
 
     //enquanto nome1 = nome2, sorteia novamente
-    while(nome1 === nome2){
+    if(nome1 === nome2){
         gerarBatalha();
     }
 
     //escreve na tela
-    document.getElementById('jogador1').textContent = nome1;
+    document.getElementById('jogador1').textContent = nome1 + " x "+ nome2;
     document.getElementById('jogador2').textContent = nome2;
 
 }
@@ -48,7 +48,6 @@ function gerarBatalha(){
 function adicionar() {
     var nome = document.getElementById("nome").value;
     nomes.push(nome);
-
     listar();
 
 }

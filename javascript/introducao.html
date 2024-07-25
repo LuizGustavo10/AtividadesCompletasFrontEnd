@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Olá mundo</h1>
+
+    <script>
+    // 1 - Variáveis e Tipos de Dados:
+    // Escreva um programa que declare duas variáveis, "nome" e "idade", 
+    // e as imprima em um console em uma frase que diga: “Olá, meu nome é [nome] 
+    // e eu tenho [idade] anos.”
+    // Exercício 1: Variáveis e Tipos de Dados
+    const nome = "João";
+    const idade = 25;
+    console.log(`Olá, meu nome é ${nome} e eu tenho ${idade} anos.`);
+
+    // 2 - Operadores:
+    // Crie um programa que solicite ao usuário dois números e exiba o
+    // resultado da soma, subtração, multiplicação e divisão desses números.
+    // Exercício 2: Operadores
+    const num1 = parseFloat(prompt("Digite o primeiro número:"));
+    const num2 = parseFloat(prompt("Digite o segundo número:"));
+
+    const soma = num1 + num2;
+    const subtracao = num1 - num2;
+    const multiplicacao = num1 * num2;
+    const divisao = num1 / num2;
+
+    console.log(`Soma: ${soma}`);
+    console.log(`Subtração: ${subtracao}`);
+    console.log(`Multiplicação: ${multiplicacao}`);
+    console.log(`Divisão: ${divisao}`);
+
+    // 3 - Condições:
+    // Escreva um programa que pergunte ao usuário sua idade e imprima se ele é maior ou menor de idade.
+    // Exercício 3: Condições
+    const idadeUsuario = parseInt(prompt("Digite sua idade:"));
+
+    if (idadeUsuario >= 18) {
+    console.log("Você é maior de idade.");
+    } else {
+    console.log("Você é menor de idade.");
+    }
+    
+    //    4 - Loops:
+    //  Crie um loop que imprima todos os números de 1 a 100.
+    // Exercício 4: Loops
+    for (let i = 1; i <= 100; i++) {
+        console.log(i);
+    }
+
+    //5 - Funções
+    // Exercício 5: Funções
+    function somarNumeros(a, b) {
+    return a + b;
+    }
+
+    const resultadoSoma = somarNumeros(10, 20);
+    console.log(`Resultado da soma: ${resultadoSoma}`);
+
+    // 6 - Arrays:
+    // Escreva um programa que declare um array de suas frutas favoritas e 
+    // imprima cada fruta na lista usando um loop.
+    // Exercício 6: Arrays
+    const frutasFavoritas = ["maçã", "banana", "uva", "morango"];
+
+    for (const fruta of frutasFavoritas) {
+        console.log(fruta);
+    }
+
+    //7 - Objetos:
+    // Crie um objeto que represente um livro, com propriedades para título, 
+    // autor e número de páginas. Imprima cada propriedade no console.
+
+    // Exercício 7: Objetos
+    const livro = {
+    titulo: "O Senhor dos Anéis",
+    autor: "J.R.R. Tolkien",
+    paginas: 1000,
+    };
+
+    console.log(`Título: ${livro.titulo}`);
+    console.log(`Autor: ${livro.autor}`);
+    console.log(`Páginas: ${livro.paginas}`);
+
+    // 8 Eventos DOM:
+    //Crie uma página HTML com um botão que, quando clicado, exiba 
+    //um alerta que diga: “Você clicou no botão!”.
+
+    <!-- Exercício 8: Eventos DOM -->
+    // <!DOCTYPE html>
+    // <html lang="en">
+    // <head>
+    //     <meta charset="UTF-8">
+    //     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    //     <title>Botão Clicado</title>
+    // </head>
+    // <body>
+    //     <button onclick="exibirAlerta()">Clique aqui</button>
+
+    //     <script>
+    //         function exibirAlerta() {
+    //             alert("Você clicou no botão!");
+    //         }
+    //     <script>
+    // </body>
+    // </html>
+
+
+    </script>   
+</body>
+</html>

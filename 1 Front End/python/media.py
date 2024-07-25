@@ -19,3 +19,23 @@ elif(notaFinal < 80):
 else:
     print("O Aluno foi excelente!")
 
+# def resto_divisao(a, b):
+#     return a % b
+
+
+# # Teste
+# a = 10
+# b = 3
+# print(resto_divisao(a, b))  # Saída esperada: 1
+
+
+
+# import random
+
+# def sorteio_numero(minimo, maximo):
+#     return random.randint(minimo, maximo)
+
+# # Teste
+# minimo = 1
+# maximo = 10
+# print(sorteio_numero(minimo, maximo))  # Saída esperada: um número entre 1 e 10

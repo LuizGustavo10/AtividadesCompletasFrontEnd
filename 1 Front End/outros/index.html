@@ -15,15 +15,28 @@
 
     <header>
         <nav class="menu">
+            <div class="menu-toggle">&#9776; Menu</div>
             <ul>
                 <li> <a href="#inicio"> Informações Pessoais </a> </li>
                 <li> <a href="#experiencia"> Experiências </a> </li>
                 <li> <a href="#formacao"> Formação </a> </li>
                 <li> <a href="#redes"> Redes Sociais </a> </li>
                 <li> <a href="sobre.html"> Sobre </a> </li>
-
             </ul>
         </nav>
+    </header>
+
+    <!-- Restante do seu conteúdo HTML -->
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu ul');
+
+        menuToggle.addEventListener('click', function () {
+            menu.classList.toggle('show-menu');
+        });
+    </script>
+    
     </header>
     <!-- essa parte é o inicio -->
 
