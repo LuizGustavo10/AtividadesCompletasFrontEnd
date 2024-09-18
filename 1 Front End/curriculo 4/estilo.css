@@ -1,0 +1,189 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de cores */
+:root {
+    --cor-primaria: #2c3e50;
+    --cor-secundaria: #18bc9c;
+    --cor-fundo: #ecf0f1;
+    --cor-texto: #34495e;
+    --cor-acento: #e74c3c;
+    --fonte-principal: 'Roboto', sans-serif;
+}
+
+/* Tipografia */
+body {
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background-color: var(--cor-primaria);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.menu .celular {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        background-color: var(--cor-primaria);
+        transition: left 0.3s;
+    }
+
+    .menu ul.mostrar-menu {
+        left: 0;
+    }
+
+    .menu ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .menu .celular {
+        display: block;
+    }
+}
+
+/* Seções */
+section {
+    padding: 60px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.section-inicio {
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://static.giulianaflores.com.br/images/product/rs-1032-18875-2.jpg?ims=500x500') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.section-inicio .perfil-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--cor-secundaria);
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.section-info, .section-endereco, .section-experiencia, .section-formacao, .section-cursos, .section-contato {
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--cor-primaria);
+}
+
+section ul {
+    list-style: none;
+    max-width: 600px;
+    margin: auto;
+}
+
+section ul li {
+    background: var(--cor-fundo);
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 5px solid var(--cor-secundaria);
+    display: flex;
+    align-items: center;
+}
+
+section ul li i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    min-width: 25px;
+    text-align: center;
+}
+
+/* Contato */
+.contato-lista li a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contato-lista li a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    color: var(--cor-fundo);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

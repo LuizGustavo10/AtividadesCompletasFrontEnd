@@ -1,0 +1,184 @@
+body {
+ 
+    text-align: center;      /* centralizando texto*/ 
+    background-color: rgb(198, 208, 244); /* cor de fundo */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("https://cdn.pixabay.com/photo/2024/02/16/12/37/people-8577517_1280.jpg");
+    background-size: cover;
+}
+
+ul {
+    list-style:none; /*desativa estilo de lista*/
+    text-align: left;
+
+   
+}
+
+/* --------------novo-----------------------*/
+.topo{
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    width: 50%;
+    border: 10px solid orange;
+    z-index: 11;
+}
+
+.topo2{
+    position: absolute;
+    top: 180px;
+    left: 50px;
+    width: 150px;
+    z-index: 12;
+}
+
+.esquerda{
+    width: 15%;
+    padding-top: 200px;
+    height: 1000px;
+}
+.direita{
+    width: 80%;
+    padding-top: 200px;
+    height: 1000px;
+}
+/* --------------------------------------*/
+
+
+/*personalizando imagem*/
+#perfil {
+    width: 120px;           /*largura*/
+    border-radius: 15px;    /*arredondar*/
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px gray;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+#perfil:hover{
+    width: 140px;
+    transition: 2s;
+    filter: grayscale(100%);
+}
+
+h1, h2, h3{
+    text-shadow: 1px 1px 1px rgb(215, 213, 213);
+    color: darkblue;
+    background-color: rgb(255, 255, 255);
+    margin-top: -1px;
+    border-start-start-radius: 15px;
+    border-start-end-radius:15px;
+    padding: 10px;
+    
+}
+
+section {
+    background-color: white; /* cor de fundo do card*/
+           /* tamanho máximo do card*/
+    min-width: 240px;          /* tamanho mínimo */
+    margin: auto;              /*centralizar, margem automática */
+    border-radius: 15px;       /*arredondar cantos*/
+    padding: 1px;              /*espaçamento interno */
+    margin-bottom: 20px;       /*margem de baixo do card*/
+    box-shadow: 2px 2px 7px gray;
+}
+
+/*quando passar o mouse no card*/
+section:hover{
+    background-color: rgb(207, 244, 255);
+    transition: 2s;
+    font-size: 17px;
+   
+}
+
+.lado {
+    display: inline-block; /*organize em linhas, os blocos de conteúdo*/
+    vertical-align: top;   /* coloque as informações acima*/
+}
+
+.menu {
+    background-color: black; /* cor fundo */
+    border-radius: 15px;       /*arredondar borda*/
+}
+.menu ul li {
+    display: inline-block;
+    padding: 10px; /*espaçamento interno*/
+    width: 170px;
+    background-color: darkblue;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px white;
+    margin: 10px;
+    text-align: center;
+}
+.menu ul li a {
+    color: white;           /*cor da letra*/
+    text-decoration: none;    /*tirar traçado*/
+}
+
+.celular {
+    display: none; /*desaparece o icone menu*/
+}
+#contato ul {
+    color: indigo; /*cor do icone*/
+    font-size: 15px;
+}
+#contato ul li a {
+    text-decoration: none; /*tira linha*/
+    color: black;
+}
+.whats{
+    color: red;
+}
+
+
+/* configuração da personalização no modo celular */
+@media(max-width: 1050px){ 
+
+    .celular {
+        color: white;
+        font-size:20px;
+        text-align: left; /*posicionamento*/
+        padding: 10px;    /*espaçamento interno*/
+        display: block;   /*aparece o icone do menu*/
+        margin-bottom: 10px; /*margem abaixo */
+    }
+    .menu ul{
+        display: none; /*desaparece lista menu*/
+    }
+
+    section {
+        font-size: 12px;
+    }
+    section:hover{
+        font-size: 12px;
+    }
+    ul.mostrarMenu{
+        display: inline-block;
+    }
+    /* ---------------novo-----------------------*/
+
+    .topo{
+       position: static;
+       width: 90%;
+       left: 0px;
+    }
+    .esquerda{
+       padding-top: 5px;
+       height: fit-content;
+       width: 90%;
+    }
+    .direita{
+        padding-top: 5px;
+        height: fit-content;
+        width: 80%;
+    }
+    .topo2{
+        display: none;
+    }
+    
+    /* --------------------------------------*/
+
+    
+
+}
+

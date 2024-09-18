@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Currículo </title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+
+    <!-- esse é o cabeçalho do meu site  -->
+    <header>
+        <nav class="menu">
+            <div class="celular"> &#9776 Menu </div>
+            <ul>
+                <li> <a href="#inicio"> Informações Pessoais </a> </li>
+                <li> <a href="#endereco"> Endereço </a> </li>
+                <li> <a href="#experiencia"> Experiência </a> </li>
+                <li> <a href="#formacaoProfissional"> Formação </a> </li>
+                <li> <a href="#cursosComplementares"> Cursos complementares </a> </li>
+                <li> <a href="#contato"> Contato </a> </li>
+            </ul>
+        </nav>
+
+        <script>
+            var celular = document.querySelector('.celular'); //obtém componente do celular
+            var listaMenu = document.querySelector('.menu ul'); //obtém lista
+
+            celular.addEventListener('click', function() { 
+                listaMenu.classList.toggle('mostrarMenu');
+             });
+        </script>
+
+    </header>
+
+     <!-- adicionado section topo ------------------------------------------>
+    <section class="topo">
+        <h1> Luiz Gustavo Francisco</h1>
+        <p>Conteudo </p>
+    </section>
+
+    <img class="topo2" src="https://www.pngall.com/wp-content/uploads/5/Pikachu-PNG-Image-File.png" alt="">
+     <!-------------------------------------------->
+
+    <!-- adicionado classe lado e esquerda abaixo ------------------------------------------>
+    <section id="inicio" class="lado esquerda">
+        
+        <h2> Luiz Gustavo Francisco </h2>
+        <p> Programador Full Stack</p>
+
+        <div class="lado" >
+            <img id="perfil" src="https://static.giulianaflores.com.br/images/product/rs-1032-18875-2.jpg?ims=500x500" alt="Imagem de perfil">
+        </div>
+        <div class="lado">
+            <h3> <i class="fa-solid fa-user"></i>  Infomações Pessoais </h3>
+
+            <ul>
+                <li> Telefone: 4002-8922</li>
+                <li> Email: teste@gmail.com</li>
+            </ul>
+        </div>
+
+    </section>
+    <!-- adicionado classe lado e direta abaixo ------------------------------------------>
+    <section id="endereco" class="lado direita">
+        <h3> <i class="fa-solid fa-house"></i> Endereço</h3>
+        <ul>
+            <li> Rua: Ivan da Silva</li>
+            <li> Número: 22</li>
+            <li> Bairro: Centro </li>
+            <li> Complemento: Próximo ao Hospital</li>
+        </ul>
+    </section>
+
+    <section id="experiencia">
+        <h3> <i class="fa-solid fa-star"></i> Experiências</h3>
+        <ul>
+            <li> Senac Nova Londrina </li>
+            <li> Cartório - Serviço Distrital de Marilena </li>
+            <li> Depósito Rio Branco</li>
+            <li> Infomania Sistemas - Nova Londrina</li>
+
+        </ul>
+    </section>
+
+    <section id="formacaoProfissional">
+        <h3> <i class="fa-solid fa-graduation-cap"></i> Formação </h3>
+        <ul>
+            <li> Colégio Estadual Princesa Isabel</li>
+            <li> Informática - CDI Profissionalizante</li>
+            <li> IFPR - Análise e Desenvolvimento de Sistemas </li>
+            <li> Pós Graduação - Gestão de Negócios e Inovação </li>
+        </ul>
+    </section>
+
+    <section id="cursosComplementares">
+        <h3> <i class="fa-solid fa-book"></i> Cursos Complementares </h3>
+        <ul>
+            <li> Senac - Comunicação Assertiva </li>
+            <li> Senac - Inteligência Emocional em Vendas</li>
+            <li> Curso Cisco Packet Tracer</li>
+
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h3> <i class="fa-solid fa-phone"></i> Contato </h3>
+        <ul>
+            <li> <i style="color:green" class="fa-brands fa-whatsapp"></i> <a  href="https://wa.me/+5544974009708" target="_blank"> WhatsApp </a> </li>
+            <li> <i style="color: blue" class="fa-brands fa-square-facebook"></i> <a href="" target="_blank">Facebook </a> </li>
+            <li> <i style="color: darkorange" class="fa-brands fa-instagram"></i> <a href="" target="_blank"> Instagram </a> </li>
+            <li> <i style="color: cornflowerblue" class="fa-brands fa-linkedin"></i> <a href="" target="_blank"> Linkedin </a> </li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p> Criado por Luiz </p>
+    </footer>
+
+
+</body>
+
+</html>

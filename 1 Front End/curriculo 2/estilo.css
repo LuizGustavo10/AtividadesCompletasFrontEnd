@@ -1,0 +1,147 @@
+body {
+ 
+    text-align: center;      /* centralizando texto*/ 
+    background-color: rgb(198, 208, 244); /* cor de fundo */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("https://cdn.pixabay.com/photo/2024/02/16/12/37/people-8577517_1280.jpg");
+    background-size: cover;
+}
+
+ul {
+    list-style:none; /*desativa estilo de lista*/
+    text-align: left;
+
+   
+}
+
+
+/*personalizando imagem*/
+#perfil {
+    width: 120px;           /*largura*/
+    border-radius: 15px;    /*arredondar*/
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px gray;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+#perfil:hover{
+    width: 140px;
+    transition: 2s;
+    filter: grayscale(100%);
+}
+
+h1, h2, h3{
+    text-shadow: 1px 1px 1px rgb(215, 213, 213);
+    color: darkblue;
+     background-color: rgba(255, 255, 255, 0.577); /* cor de fundo do card*/
+    margin-top: -1px;
+    border-start-start-radius: 15px;
+    border-start-end-radius:15px;
+    padding: 10px;
+    
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.577); /* cor de fundo do card*/
+     /* tamanho máximo do card*/
+    min-width: 240px;          /* tamanho mínimo */
+    margin: auto;              /*centralizar, margem automática */
+    border-radius: 15px;       /*arredondar cantos*/
+    padding: 1px;              /*espaçamento interno */
+    margin-bottom: 20px;       /*margem de baixo do card*/
+    box-shadow: 2px 2px 7px gray;
+    max-width: 500px;
+
+    animation: backInLeft; 
+    animation-duration: 2s;
+}
+
+/*quando passar o mouse no card*/
+section:hover{
+    background-color: rgb(207, 244, 255);
+    transition: 2s;
+    font-size: 17px;
+   
+}
+
+.lado {
+    display: inline-block; /*organize em linhas, os blocos de conteúdo*/
+    vertical-align: top;   /* coloque as informações acima*/
+}
+
+.menu {
+    background-color: rgba(0, 0, 0, 0.622); /* cor fundo */
+    border-radius: 15px;       /*arredondar borda*/
+
+    animation: slideInDown; 
+    animation-duration: 2s;
+}
+.menu ul li {
+    display: inline-block;
+    padding: 10px; /*espaçamento interno*/
+    width: 170px;
+    background-color: rgb(32, 2, 131);
+    border-radius: 10px;
+
+    margin: 10px;
+    text-align: center;
+
+
+}
+.menu ul li a {
+    color: white;           /*cor da letra*/
+    text-decoration: none;    /*tirar traçado*/
+}
+
+.celular {
+    display: none; /*desaparece o icone menu*/
+}
+#contato ul {
+    color: indigo; /*cor do icone*/
+    font-size: 15px;
+}
+#contato ul li a {
+    text-decoration: none; /*tira linha*/
+    color: black;
+}
+
+footer{
+    background-color: rgba(6, 6, 153, 0.682);
+    margin: -20px;
+    margin-top: 40px;
+    padding: 40px;
+    color: white;
+    box-shadow: 2px 2px 10px white;
+}
+
+
+
+/* configuração da personalização no modo celular */
+@media(max-width: 1050px){ 
+
+    .celular {
+        color: white;
+        font-size:20px;
+        text-align: left; /*posicionamento*/
+        padding: 10px;    /*espaçamento interno*/
+        display: block;   /*aparece o icone do menu*/
+        margin-bottom: 10px; /*margem abaixo */
+    }
+    .menu ul{
+        display: none; /*desaparece lista menu*/
+    }
+
+    section {
+        font-size: 12px;
+          
+    }
+    section:hover{
+        font-size: 12px;
+    }
+    ul.mostrarMenu{
+        display: inline-block;
+    }
+
+}
+

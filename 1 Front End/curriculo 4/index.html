@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo de Luiz Gustavo Francisco</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+
+    <!-- Cabeçalho do site -->
+    <header>
+        <nav class="menu">
+            <div class="celular"><i class="fas fa-bars"></i> Menu</div>
+            <ul class="menu-lista">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#informacoes-pessoais">Informações Pessoais</a></li>
+                <li><a href="#endereco">Endereço</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#cursos">Cursos Complementares</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Início -->
+    <section id="inicio" class="section-inicio">
+        <div class="container">
+            <div class="perfil">
+                <img src="https://static.giulianaflores.com.br/images/product/rs-1032-18875-2.jpg?ims=500x500"
+                    alt="Imagem de perfil" class="perfil-img">
+                <h1>Luiz Gustavo Francisco</h1>
+                <p>Programador Full Stack</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Informações Pessoais -->
+    <section id="informacoes-pessoais" class="section-info">
+        <div class="container">
+            <h2><i class="fa-solid fa-user"></i> Informações Pessoais</h2>
+            <ul>
+                <li><i class="fas fa-phone"></i> Telefone: (44) 97400-9708</li>
+                <li><i class="fas fa-envelope"></i> Email: teste@gmail.com</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Seção Endereço -->
+    <section id="endereco" class="section-endereco">
+        <div class="container">
+            <h2><i class="fa-solid fa-house"></i> Endereço</h2>
+            <ul>
+                <li><i class="fas fa-road"></i> Rua: Ivan da Silva, 22</li>
+                <li><i class="fas fa-city"></i> Bairro: Centro</li>
+                <li><i class="fas fa-map-marker-alt"></i> Complemento: Próximo ao Hospital</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Seção Experiência -->
+    <section id="experiencia" class="section-experiencia">
+        <div class="container">
+            <h2><i class="fa-solid fa-star"></i> Experiências</h2>
+            <ul>
+                <li><strong>Senac Nova Londrina</strong></li>
+                <li><strong>Cartório - Serviço Distrital de Marilena</strong></li>
+                <li><strong>Depósito Rio Branco</strong></li>
+                <li><strong>Infomania Sistemas - Nova Londrina</strong></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Seção Formação -->
+    <section id="formacao" class="section-formacao">
+        <div class="container">
+            <h2><i class="fa-solid fa-graduation-cap"></i> Formação</h2>
+            <ul>
+                <li><strong>Colégio Estadual Princesa Isabel</strong></li>
+                <li><strong>Informática - CDI Profissionalizante</strong></li>
+                <li><strong>IFPR - Análise e Desenvolvimento de Sistemas</strong></li>
+                <li><strong>Pós Graduação - Gestão de Negócios e Inovação</strong></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Seção Cursos Complementares -->
+    <section id="cursos" class="section-cursos">
+        <div class="container">
+            <h2><i class="fa-solid fa-book"></i> Cursos Complementares</h2>
+            <ul>
+                <li><strong>Senac - Comunicação Assertiva</strong></li>
+                <li><strong>Senac - Inteligência Emocional em Vendas</strong></li>
+                <li><strong>Curso Cisco Packet Tracer</strong></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="section-contato">
+        <div class="container">
+            <h2><i class="fa-solid fa-phone"></i> Contato</h2>
+            <ul class="contato-lista">
+                <li><i class="fa-brands fa-whatsapp" style="color:green;"></i> <a
+                        href="https://wa.me/+5544974009708" target="_blank">WhatsApp</a></li>
+                <li><i class="fa-brands fa-facebook" style="color:blue;"></i> <a href="#" target="_blank">Facebook</a>
+                </li>
+                <li><i class="fa-brands fa-instagram" style="color:darkorange;"></i> <a href="#"
+                        target="_blank">Instagram</a></li>
+                <li><i class="fa-brands fa-linkedin" style="color:cornflowerblue;"></i> <a href="#"
+                        target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Criado por <strong>Luiz</strong></p>
+            <cite>Foguete não tem ré 🚀</cite>
+        </div>
+    </footer>
+
+    <!-- Script para Menu Responsivo -->
+    <script>
+        const celular = document.querySelector('.celular');
+        const menuLista = document.querySelector('.menu-lista');
+
+        celular.addEventListener('click', () => {
+            menuLista.classList.toggle('mostrar-menu');
+        });
+    </script>
+
+</body>
+
+</html>
