@@ -21,17 +21,24 @@ function jogar(celula){
     }
 }
 
-//função recarrega pagina
-function reiniciar(){
-    window.location.reload();
+function reiniciar() {
+    let celulas = document.querySelectorAll("td");
+
+    for (let i = 0; i < celulas.length; i++) {
+        celulas[i].innerHTML = "";
+        celulas[i].style.backgroundColor = "";
+    }
+
+    jogador = "x"; // reinicia o jogador
 }
 
 // fulano = 0, ciclano =1, deltrano =2, beltrano=3
 
 const nomes = ['fulano','ciclano','deltrano','beltrano','antonio','carlos'];
 
+
 function gerarBatalha(){
- //sorteia um nome da lista, "Math.random vai sortear os itens", "math.floor arredonda o numero da lista"
+    //sorteia um nome da lista, "Math.random vai sortear os itens", "math.floor arredonda o numero da lista"
     const nome1 = nomes[ Math.floor( Math.random() * nomes.length ) ];
     const nome2 = nomes[ Math.floor( Math.random() * nomes.length ) ];
 
@@ -49,7 +56,6 @@ function gerarBatalha(){
 function adicionar() {
     var nome = document.getElementById("nome").value;
     nomes.push(nome);
-
     listar();
 
 }
@@ -65,6 +71,6 @@ function listar(){
         item.innerHTML = nomeItem;                  //colocar valor dentro do <li>
         listagem.appendChild(item);                 //adiciona o <li> na lista do html, dentro do <ul>
 
-
     }
 }
+

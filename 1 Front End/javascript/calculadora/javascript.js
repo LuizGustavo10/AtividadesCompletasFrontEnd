@@ -7,12 +7,10 @@ function converterParaNumero(){
     num2 = parseInt(num2);
 }
 
-
 function entrada(){
     //pega os campos de input da tela
     num1 = document.getElementById("n1").value;
     num2 = document.getElementById("n2").value;
-
      //converte de texto para números
     converterParaNumero();
     total = document.getElementById("resultado");
@@ -39,10 +37,8 @@ function dividir(){
 }
 
 function limpar(){
-
     var total = document.getElementById("resultado");
     total.innerHTML = " ";
     document.getElementById("n1").value="";
     document.getElementById("n2").value="";
-
 }

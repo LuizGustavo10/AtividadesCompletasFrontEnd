@@ -62,7 +62,6 @@ section:hover{
     background-color: rgb(207, 244, 255);
     transition: 2s;
     font-size: 17px;
-   
 }
 
 .lado {
@@ -83,24 +82,23 @@ section:hover{
     width: 170px;
     background-color: rgb(32, 2, 131);
     border-radius: 10px;
-
     margin: 10px;
     text-align: center;
 
 
 }
+
 .menu ul li a {
     color: white;           /*cor da letra*/
     text-decoration: none;    /*tirar traçado*/
 }
 
-.celular {
-    display: none; /*desaparece o icone menu*/
-}
+
 #contato ul {
     color: indigo; /*cor do icone*/
     font-size: 15px;
 }
+
 #contato ul li a {
     text-decoration: none; /*tira linha*/
     color: black;
@@ -115,6 +113,9 @@ footer{
     box-shadow: 2px 2px 10px white;
 }
 
+.celular {
+    display: none; /*desaparece o icone menu*/
+}
 
 
 /* configuração da personalização no modo celular */
@@ -144,4 +145,3 @@ footer{
     }
 
 }
-
