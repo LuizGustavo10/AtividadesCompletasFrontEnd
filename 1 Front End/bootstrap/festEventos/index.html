@@ -18,6 +18,35 @@
             /* border: 2px solid black;  */
         }
     </style>
+
+    <style>
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;   
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #1ebea5;
+}
+
+
+</style>
 </head>
 
 <body>
@@ -126,8 +155,6 @@
 
             <div class="card-deck">
 
-
-                
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="https://marketplace.canva.com/EAFuKwSatM8/1/0/1600w/canva-banner-para-loja-online-frete-gr%C3%A1tis-com-desconto-roxo-e-branco-kdzISsOH_AA.jpg" alt="Imagem de capa do card">
                         <div class="card-body">
@@ -187,18 +214,19 @@
 
 
          <div class="Viagens text-center">
-            <br><br>
+         <br><br>
 
         <h1>Viagens</h1>
 
-        <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla placeat quis omnis voluptas illo ex neque
+        <p> 
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla placeat quis omnis voluptas illo ex neque
             nostrum beatae modi voluptate, magnam natus laboriosam voluptatum deleniti dolorum accusamus? Quia, in
             temporibus.
         </p>
 
 
 
-        <div class="d-flex justify-content-center flex-wrap gap-3">
+        <div class="d-flex justify-content-center flex-wrap gap-3"> 
 
 
             <div class="card-deck">
@@ -281,7 +309,6 @@
     <a href="#parceria" class="btn btn-primary btn-lg">Seja nosso parceiro</a>
   </div>
 
-  <!-- Botão flutuante: Voltar ao topo -->
   <a href="#topo" class="btn btn-warning position-fixed bottom-0 end-0 m-4 rounded-circle shadow">
     <i class="bi bi-chevron-double-up fs-4"></i>
   </a>
@@ -340,6 +367,10 @@
     </div>
   </div>
 </footer>
+
+<a href="https://wa.me/SEUNUMERO" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

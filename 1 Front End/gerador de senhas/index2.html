@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerador com Lista de Palavras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    textarea, input, button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    li {
+      background: #333;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    li:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Gerador de Senhas com Lista de Palavras</h2>
+    <textarea id="lista-palavras" rows="5" placeholder="Digite uma palavra por linha..."></textarea>
+    <input type="number" id="quantidade" min="2" max="10" value="3" />
+    <button onclick="gerarSenha()">Gerar Senha</button>
+
+    <ul id="lista-senhas"></ul>
+  </div>
+
+  <script>
+    function gerarSenha() {
+      const textarea = document.getElementById("lista-palavras");
+      const palavras = textarea.value.split('\n').map(p => p.trim()).filter(p => p !== "");
+      const quantidade = parseInt(document.getElementById("quantidade").value);
+      const simbolos = "!@#$%&*";
+      const listaSenhas = document.getElementById("lista-senhas");
+
+      if (palavras.length < quantidade) {
+        alert("Você precisa fornecer pelo menos " + quantidade + " palavras.");
+        return;
+      }
+
+      // Embaralhar palavras
+      const embaralhadas = palavras.sort(() => 0.5 - Math.random());
+
+      // Selecionar X palavras e montar senha
+      const escolhidas = embaralhadas.slice(0, quantidade);
+      const simboloAleatorio = simbolos[Math.floor(Math.random() * simbolos.length)];
+      const numeroAleatorio = Math.floor(Math.random() * 100);
+
+      // Montar senha (ex: Palavra1-Palavra2#43)
+      const senha = escolhidas.join('-') + simboloAleatorio + numeroAleatorio;
+
+      const li = document.createElement("li");
+      li.textContent = senha;
+      li.onclick = () => {
+        navigator.clipboard.writeText(senha);
+        alert("Senha copiada!");
+      };
+      listaSenhas.prepend(li);
+    }
+  </script>
+</body>
+</html>

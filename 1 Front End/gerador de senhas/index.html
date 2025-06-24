@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de Senhas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px 0;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+      max-height: 200px;
+      overflow-y: auto;
+      border-top: 1px solid #444;
+    }
+    li {
+      background: #333;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    li:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Gerador de Senhas</h1>
+    <button onclick="gerarSenha()">Gerar Nova Senha</button>
+    <ul id="lista-senhas"></ul>
+  </div>
+
+  <script>
+    function gerarSenha(tamanho = 12) {
+      const caracteres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*()';
+      let senha = '';
+      for (let i = 0; i < tamanho; i++) {
+        const aleatorio = Math.floor(Math.random() * caracteres.length);
+        senha += caracteres[aleatorio];
+      }
+
+      adicionarNaLista(senha);
+    }
+
+    function adicionarNaLista(senha) {
+      const ul = document.getElementById("lista-senhas");
+      const li = document.createElement("li");
+      li.textContent = senha;
+      li.onclick = () => {
+        navigator.clipboard.writeText(senha);
+        alert("Senha copiada: " + senha);
+      };
+      ul.prepend(li); // adiciona no topo da lista
+    }
+  </script>
+</body>
+</html>

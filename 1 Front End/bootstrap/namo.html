@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luana e Mateus - Série</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    .cabecalho {
+      background-color: #141414;
+      padding: 1rem 1rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      gap: 40px;
+    }
+    .cabecalho nav {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .cabecalho nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 18px;
+    }
+   .banner {
+  position: relative; /* necessário para o ::after funcionar corretamente */
+  background: url(fotos/5.png) no-repeat center center/cover;
+  padding: 120px 1rem 2rem;
+  background-size: cover;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0,0,0,0.3)); /* escurece mais */
+  z-index: 1; /* fica abaixo do conteúdo */
+}
+
+.conteudo {
+  position: relative;
+  max-width: 100%;
+  color: #fff; /* branco forte */
+  z-index: 2; /* fica acima do gradiente */
+}
+    .titulo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 40px;
+      margin: 0;
+    }
+    .detalhes {
+      margin: 10px 0;
+      font-size: 12px;
+      color: #ccc;
+    }
+    .stars {
+      color: red;
+    }
+    .descricao {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+    .botoes {
+      margin-top: 20px;
+    }
+    .botoes button {
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 10px 16px;
+      margin-right: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .momentos {
+      padding: 1.5rem 1rem;
+    }
+    .momentos h2 {
+      margin-bottom: 1rem;
+      font-size: 20px;
+    }
+
+    /* Estilo para o Swiper */
+    .swiper {
+      width: 100%;
+      padding-bottom: 20px;
+    }
+    .swiper-slide {
+      width: auto !important; /* largura automática para o slide */
+    }
+    .swiper-slide img {
+      display: block;
+      width: 200px; /* largura padrão para celular */
+      border-radius: 5px;
+      margin: 0 auto;
+    }
+
+    /* Aumentar imagens no desktop */
+    @media (min-width: 900px) {
+      .swiper-slide img {
+        width: 600px;
+      }
+    }
+
+    .footer {
+      background-color: #141414;
+      padding: 1rem;
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+    }
+   
+  </style>
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="logo">
+      <img width="50px" src="https://logopng.com.br/logos/netflix-94.png" alt="">
+    </div>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Séries</a>
+      <a href="#">Filmes</a>
+      <a href="#">Minha lista</a>
+      
+      
+    </nav>
+    
+  </header>
+
+  <section class="banner">
+    <div class="conteudo">
+      <p class="titulo">Luana e Mateus</p>
+      <p class="detalhes">
+        <span>22 DE MAIO</span> • <span>3 TEMPORADAS</span>
+        <span class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+
+        </span>
+      </p>
+      <p class="descricao">
+        Nosso amor não precisa ser perfeito, porque ele é verdadeiro. A gente se entende no olhar, se apoia nas dificuldades e se diverte nas coisas mais simples. Já passamos por momentos bons e outros nem tanto, mas em todos eles, estar ao seu lado fez tudo valer a pena.
+        Você é meu porto seguro, minha paz em dias turbulentos e minha companhia preferida em qualquer situação. Com você aprendi que amor é parceria, é cuidado, é crescer junto. E mesmo quando a vida tenta nos testar, nosso amor se fortalece.
+        Eu te admiro pela sua força, pela sua calma e pela forma como você cuida de mim e do nosso relacionamento. Não quero prometer perfeição, mas quero estar aqui, te amar cada dia mais e construir um futuro cheio de memórias bonitas ao seu lado.
+        Feliz Dia dos Namorados! Te amo com tudo o que sou.
+      </p>
+      <div class="botoes">
+        <button>
+          <i class="   fa-play"></i>
+          Continuar</button>
+        <button>
+          <i class="fa-solid fa-star"></i>
+          Favorito</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="momentos">
+    <h2>Nossos Melhores Momentos</h2>
+    <!-- Swiper -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="fotos/1.png" alt="Momento 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="fotos/2.png" alt="Momento 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="fotos/3.png" alt="Momento 3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="fotos/4.png" alt="Momento 4" />
+        </div>
+        <div class="swiper-slide">
+          <img src="fotos/5.png" alt="Momento 5" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 Luiz - Todos os direitos reservados.
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 2, // padrão para celular
+      spaceBetween: 10,
+      loop: true,
+      breakpoints: {
+        600: {
+          loop: true,
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+        900: {
+            loop: true,
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+  </script>
+</body>
+</html>
+ 
