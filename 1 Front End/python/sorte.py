@@ -56,6 +56,7 @@ def evento_aleatorio():
     except ValueError as e:
         print(f"Entrada inválida: {e}. Tente novamente.")
         evento_aleatorio()
+        
 
     if escolha == escolha_indesejada:
         print("Ops! O computador abrirá janelas aleatórias e será desligado.")

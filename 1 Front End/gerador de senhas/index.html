@@ -28,9 +28,11 @@
       cursor: pointer;
       border-radius: 5px;
     }
+
     button:hover {
       background: #45a049;
     }
+    
     ul {
       list-style: none;
       padding: 0;
@@ -59,9 +61,11 @@
   </div>
 
   <script>
+    
     function gerarSenha(tamanho = 12) {
-      const caracteres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*()';
       let senha = '';
+      const caracteres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*()';
+      
       for (let i = 0; i < tamanho; i++) {
         const aleatorio = Math.floor(Math.random() * caracteres.length);
         senha += caracteres[aleatorio];
@@ -69,6 +73,39 @@
 
       adicionarNaLista(senha);
     }
+
+
+    function gerarSenha2(qtdPalavras = 3) {
+  const listaPalavras = [
+    "gato", "sol", "azul", "teclado", "pizza", 
+    "café", "livro", "nuvem", "fogo", "lua"
+  ];
+
+  if (listaPalavras.length < qtdPalavras) {
+    alert("Lista de palavras muito curta.");
+    return;
+  }
+
+  // Embaralha a lista de palavras
+  const embaralhadas = [...listaPalavras].sort(() => 0.5 - Math.random());
+
+  // Seleciona as primeiras N palavras
+  const escolhidas = embaralhadas.slice(0, qtdPalavras);
+
+  // Adiciona um símbolo e número aleatório (opcional)
+  const simbolos = "!@#$%&*";
+  const simbolo = simbolos[Math.floor(Math.random() * simbolos.length)];
+  const numero = Math.floor(Math.random() * 100);
+
+  // Monta a senha
+  const senha = escolhidas.join('-') + simbolo + numero;
+
+  adicionarNaLista(senha);
+}
+
+
+
+
 
     function adicionarNaLista(senha) {
       const ul = document.getElementById("lista-senhas");
