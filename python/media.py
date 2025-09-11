@@ -7,6 +7,7 @@ nota4 = float(input("Insira a quarta Nota:"))
 #PROCESSAMENTO DOS DADOS
 notaFinal = (nota1 + nota2 + nota3 + nota4) / 4
 
+ 
 #SAÍDA
 print("A Nota Final é: ", notaFinal)
 

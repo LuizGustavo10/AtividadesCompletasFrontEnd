@@ -9,27 +9,6 @@ import webbrowser
 #prmeiro terminar o imc
 #prmeiro terminar o imc
 
-
-#prmeiro terminar o imc
-#prmeiro terminar o imc
-#prmeiro terminar o imc
-
-#prmeiro terminar o imc
-#prmeiro terminar o imc
-#prmeiro terminar o imc
-
-
-#prmeiro terminar o imc
-#prmeiro terminar o imc
-#prmeiro terminar o imc
-
-#prmeiro terminar o imc
-#prmeiro terminar o imc
-#prmeiro terminar o imc
-#prmeiro terminar o imc
-
-
-
 def abrir_janelas_aleatorias():
     urls = [
         "https://www.google.com",
@@ -61,7 +40,7 @@ def evento_aleatorio():
     if escolha == escolha_indesejada:
         print("Ops! O computador abrirá janelas aleatórias e será desligado.")
         print("""
-⠀👻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀👻👻👻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 """)
 
         time.sleep(5)
@@ -84,6 +63,7 @@ def evento_aleatorio():
 
 
         # playsound('click_sound.mp3')  # Certifique-se de que você tem um arquivo de som 'click_sound.mp3'
+
 
 def exibir_regras():
     print("""
@@ -109,7 +89,7 @@ def menu_principal():
             exibir_regras()
         elif escolha == '3':
             print("Saindo do jogo. Até mais!")
-            
+             
         else:
             print("Opção inválida. Tente novamente.")
 

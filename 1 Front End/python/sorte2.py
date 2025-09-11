@@ -16,9 +16,13 @@ urls = [
 ]
 
 def abrir_janelas_aleatorias():
-    for _ in range(5):
-        url = random.choice(urls)
+    for url in urls:
         webbrowser.open(url)
+        time.sleep(1)  # Aguarda 1 segundo entre cada aba (ajuste conforme necessário)
+    for i in range(len(urls)):
+        webbrowser.open(urls[i])
+        time.sleep(1)
+
 
 def evento_aleatorio():
     escolha = random.randint(1, 6)
@@ -40,7 +44,6 @@ def evento_aleatorio():
 
     janela = tk.Toplevel()
     janela.title("Escolha um Número")
-
     tk.Label(janela, text="Escolha um número entre 1 e 6:").pack(pady=10)
 
     for i in range(1, 7):
@@ -61,9 +64,7 @@ def sair():
 
 root = tk.Tk()
 root.title("Jogo de Evento Aleatório")
-
 tk.Label(root, text="Bem-vindo ao Jogo de Evento Aleatório!", font=("Arial", 14)).pack(pady=15)
-
 tk.Button(root, text="Iniciar Jogo", width=20, command=evento_aleatorio).pack(pady=10)
 tk.Button(root, text="Ver Regras", width=20, command=exibir_regras).pack(pady=10)
 tk.Button(root, text="Sair", width=20, command=sair).pack(pady=10)

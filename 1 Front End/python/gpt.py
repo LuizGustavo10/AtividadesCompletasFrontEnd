@@ -4,7 +4,7 @@ from transformers import pipeline
 gerador = pipeline("text-generation", model="pierreguillou/gpt2-small-portuguese")
 
 # Texto inicial (prompt)
-inicio = "Era uma vez um robô que"
+inicio = "o que é pedagogia? "
 
 # Gera texto
 resposta = gerador(inicio, max_length=50, num_return_sequences=1)
