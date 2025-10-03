@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Batalha Pokémon</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: url("https://wallpapercave.com/wp/wp2750920.png") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+    }
+    .arena {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 50px;
+    }
+    .pokemon {
+      text-align: center;
+    }
+    .pokemon img {
+      width: 200px;
+      height: 200px;
+    }
+    .vida {
+      margin: 10px 0;
+    }
+    #acoes button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #atacar {
+      background: red;
+      color: white;
+    }
+    #defender {
+      background: blue;
+      color: white;
+    }
+    #log {
+      margin-top: 20px;
+      background: rgba(0,0,0,0.6);
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚔️ Batalha Pokémon</h1>
+  <div class="arena">
+    <div class="pokemon" id="p1">
+      <h2 id="nome1">Carregando...</h2>
+      <img id="img1" src="">
+      <div class="vida">HP: <span id="hp1">0</span></div>
+    </div>
+    <div class="pokemon" id="p2">
+      <h2 id="nome2">Carregando...</h2>
+      <img id="img2" src="">
+      <div class="vida">HP: <span id="hp2">0</span></div>
+    </div>
+  </div>
+
+  <div id="acoes">
+    <button id="atacar">Atacar</button>
+    <button id="defender">Defender</button>
+  </div>
+
+  <div id="log"></div>
+
+  <script>
+    let pokemon1, pokemon2;
+    let hp1, hp2;
+    let defendendo = false;
+
+    async function carregarPokemon(id) {
+      const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+      return res.json();
+    }
+
+    async function iniciarBatalha() {
+      const id1 = Math.floor(Math.random() * 151) + 1;
+      const id2 = Math.floor(Math.random() * 151) + 1;
+
+      pokemon1 = await carregarPokemon(id1);
+      pokemon2 = await carregarPokemon(id2);
+
+      hp1 = pokemon1.stats[0].base_stat; // HP base
+      hp2 = pokemon2.stats[0].base_stat;
+
+      document.getElementById("nome1").innerText = pokemon1.name.toUpperCase();
+      document.getElementById("img1").src = pokemon1.sprites.other["official-artwork"].front_default;
+      document.getElementById("hp1").innerText = hp1;
+
+      document.getElementById("nome2").innerText = pokemon2.name.toUpperCase();
+      document.getElementById("img2").src = pokemon2.sprites.other["official-artwork"].front_default;
+      document.getElementById("hp2").innerText = hp2;
+
+      document.getElementById("log").innerHTML = `<p>A batalha começou entre ${pokemon1.name.toUpperCase()} e ${pokemon2.name.toUpperCase()}!</p>`;
+    }
+
+    function atacar() {
+      let dano = pokemon1.stats[1].base_stat - Math.floor(pokemon2.stats[2].base_stat / 2);
+      if (dano < 1) dano = 1;
+      hp2 -= dano;
+      if (hp2 < 0) hp2 = 0;
+      document.getElementById("hp2").innerText = hp2;
+      log(`${pokemon1.name.toUpperCase()} atacou causando ${dano} de dano!`);
+
+      if (hp2 <= 0) {
+        log(`🎉 ${pokemon1.name.toUpperCase()} venceu a batalha!`);
+        encerrar();
+        return;
+      }
+
+      turnoInimigo();
+    }
+
+    function defender() {
+      defendendo = true;
+      log(`${pokemon1.name.toUpperCase()} está defendendo!`);
+      turnoInimigo();
+    }
+
+    function turnoInimigo() {
+      setTimeout(() => {
+        let acao = Math.random() < 0.7 ? "atacar" : "defender";
+        if (acao === "atacar") {
+          let dano = pokemon2.stats[1].base_stat - Math.floor(pokemon1.stats[2].base_stat / 2);
+          if (defendendo) {
+            dano = Math.floor(dano / 2);
+            defendendo = false;
+          }
+          if (dano < 1) dano = 1;
+          hp1 -= dano;
+          if (hp1 < 0) hp1 = 0;
+          document.getElementById("hp1").innerText = hp1;
+          log(`${pokemon2.name.toUpperCase()} atacou causando ${dano} de dano!`);
+
+          if (hp1 <= 0) {
+            log(`💀 ${pokemon2.name.toUpperCase()} venceu a batalha!`);
+            encerrar();
+            return;
+          }
+        } else {
+          log(`${pokemon2.name.toUpperCase()} está defendendo!`);
+        }
+      }, 1000);
+    }
+
+    function log(msg) {
+      document.getElementById("log").innerHTML += `<p>${msg}</p>`;
+      document.getElementById("log").scrollTop = document.getElementById("log").scrollHeight;
+    }
+
+    function encerrar() {
+      document.getElementById("acoes").style.display = "none";
+    }
+
+    document.getElementById("atacar").addEventListener("click", atacar);
+    document.getElementById("defender").addEventListener("click", defender);
+
+    iniciarBatalha();
+  </script>
+</body>
+</html>

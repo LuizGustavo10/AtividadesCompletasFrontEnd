@@ -73,3 +73,11 @@ function voltar() {
     buscar();
 
 }
+
+document.getElementById("meuInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        // Chama o método que você quiser
+        meuMetodo();
+    }
+});
+if (event.key === "r" || event.key === "R") {

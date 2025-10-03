@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Quem é esse Pokémon?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: url("https://images3.alphacoders.com/677/thumb-1920-677583.png    ") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      color: #ffcc00;
+      text-shadow: 2px 2px 4px #000;
+    }
+    #pokemon {
+      width: 200px;
+      height: 200px;
+      image-rendering: pixelated;
+      filter: brightness(0);
+      margin: 20px;
+    }
+    #resposta {
+      margin-top: 15px;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+      text-align: center;
+      font-size: 16px;
+    }
+    #botao {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #ff0000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #botao:hover {
+      background: #cc0000;
+    }
+    #resultado {
+      font-size: 18px;
+      margin-top: 10px;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quem é esse Pokémon?</h1>
+  <img id="pokemon" src="" alt="Pokémon misterioso">
+  <br>
+  <input type="text" id="resposta" placeholder="Digite o nome do Pokémon">
+  <br>
+  <button id="botao">Responder</button>
+  <div id="resultado"></div>
+
+  <script>
+    let pokemonAtual = null;
+
+    async function carregarPokemon() {
+      const id = Math.floor(Math.random() * 151) + 1; // Geração 1 (1 a 151)
+      const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+      const dados = await resposta.json();
+
+      pokemonAtual = dados.name.toLowerCase();
+      document.getElementById("pokemon").src = dados.sprites.other["official-artwork"].front_default;
+      document.getElementById("pokemon").style.filter = "brightness(0)"; // esconde
+      document.getElementById("resultado").innerText = "";
+      document.getElementById("resposta").value = "";
+    }
+
+    document.getElementById("botao").addEventListener("click", () => {
+      const resposta = document.getElementById("resposta").value.toLowerCase().trim();
+      if (resposta === pokemonAtual) {
+        document.getElementById("resultado").innerText = "🎉 Acertou! É " + pokemonAtual.toUpperCase();
+      } else {
+        document.getElementById("resultado").innerText = "❌ Errou! Era " + pokemonAtual.toUpperCase();
+      }
+      document.getElementById("pokemon").style.filter = "none"; // revela
+      setTimeout(carregarPokemon, 3000); // próximo
+    });
+
+    carregarPokemon();
+  </script>
+</body>
+</html>
